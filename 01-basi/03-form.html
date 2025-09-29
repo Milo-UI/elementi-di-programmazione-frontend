@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML & CSS - Basi 03 - Form HTML</title>
+
+    <link rel="stylesheet" href="../css/general.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <!--
+            I form vengono utilizzati per ottenere informazioni dall'utente, che sia per permnettergli di fare il login o la registrazione al sito, o per contattare i proprietari del sito mandandogli un messaggio, o ancora un form di ricerca dove possiamo chiedere all'utente i parametri della sua ricerca.
+
+            Per questo motivo un form di solito è composto da una serie di campi di input nei quali l'utente può immettere le informazioni. In base al tipo di informazione richiesta, servirà un tipo di campo input specifico (attributo type).
+        -->
+
+        <h1>Form HTML</h1>
+
+        <!-- L'attributo action nel tag FORM serve a dire al browser cosa fare una volta che l'utente invia le informazioni -->
+        <form action="php/sendMail.php">
+            <!--
+                I tag INPUT sono autoconclusivi e hanno sempre l'attributo type per indicare il genere di dato che ci aspettiamo dall'utente. Per esempio text, che è il più generico, si aspetta una stringa di testo di qualsiasi tipo.
+
+                Di solito si assegna un id per poterlo legare alla propria etichetta. È buona norma usare i tag LABEL per etichettare i campi di input, così che il browser e soprattutto l'utente sappiano che tipo di dato ci aspettiamo che benga inserito nel campo di input. Nell'attributo for della LABEL si inserisce l'id dell'input che descrive.
+
+                L'attributo name ha uno scopo simile a id, ma viene anche utilizzato nel momento in cui il form viene inviato alla gestione backend, che prende questi dati e li processa in base a ciò che serve servendosi dell'attributo name.
+
+                Esistono campi di input che non richiedono all'utente di scrivere qualcosa, ma di selezionare una o più opzioni, come ad esempio le select, i checkbox e i radio button.
+
+                La select è un campo di input ch epermette all'utente di clicccare su di esso per avere un men`¨a tendina dal quale scegliere il valore da inserire e poi inviare il form.
+            -->
+            <label for="username">Username</label> <br>
+            <input type="text" id="username" name="username" placeholder="Scegli uno username" required> <br><br>
+
+            <label for="email">Email</label> <br>
+            <input type="email" id="email" name="email" placeholder="inserisci la tua email" required> <br><br>
+
+            <label for="password">Password</label> <br>
+            <input type="password" id="password" name="password" placeholder="crea una password" required> <br><br>
+
+            <label for="domanda">Domanda di sicurezza</label> <br>
+            <select id="domanda" name="domanda">
+                <option value="d1">Come si chiama il tuo animale domestico?</option>
+                <option value="d2">Qual è il tuo colore preferito?</option>
+                <option value="d3">Qual è la tua domanda di sicurezza preferita?</option>
+            </select> <br><br>
+
+            <label for="risposta">Risposta alla domanda di sicurezza</label> <br>
+            <input type="text" id="risposta" name="risposta"> <br><br>
+
+            <span>Seleziona il tuo gender:</span> <br>
+            <input type="radio" id="opzione1" name="gender" value="uomo">
+            <label for="opzione1">Uomo</label>
+            <input type="radio" id="opzione2" name="gender" value="donna">
+            <label for="opzione2">Donna</label>
+            <input type="radio" id="opzione3" name="gender" value="altro">
+            <label for="opzione3">Altro</label>
+
+            <br><br>
+
+            <label for="bio">Dicci qualcosa sulla tua vita:</label> <br>
+            <textarea id="bio" name="bio" cols="60" rows="10" placeholder="parlaci di te..."></textarea>
+
+            <br><br>
+
+            <input type="submit" value="Invia il form e registrati">
+        </form>
+
+    </div>
+
+</body>
+</html>
