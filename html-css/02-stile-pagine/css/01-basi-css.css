@@ -1,61 +1,61 @@
 h1 {
-    /* colora il testo */
-    color: orange;
+	/* colora il testo */
+	color: orange;
 
-    /* colora lo sfondo */
-    background-color: #708090;
+	/* colora lo sfondo */
+	background-color: slategray;
 
-    /* determina la grandezza del font */
-    font-size: 60px;
+	/* determina la grandezza del font */
+	font-size: 60px;
 
-    /* assegna una decorazione al testo e ha dei valori prestabiliti come tante altre proprietà */
-    text-decoration: underline;
+	/* assegna una decorazione al testo e ha dei valori prestabiliti come tante altre proprietà */
+	text-decoration: underline;
 
-    /* permette di scegliere la font family del testo */
-    font-family: Arial, Helvetica, sans-serif;
+	/* permette di scegliere la font family del testo */
+	font-family: Arial, Helvetica, sans-serif;
 
-    /* permette di allineare il testo */
-    text-align: center;
+	/* permette di allineare il testo */
+	text-align: center;
 }
 
 p {
-    color: slategray;
+	color: slategray;
 
-    /* determina lo spazio verticale tra le righe di un testo (interlinea) */
-    line-height: 30px;
+	/* determina lo spazio verticale tra le righe di un testo (interlinea) */
+	line-height: 30px;
 
-    /* determina lo spazio tra ogni singola lettera di un testo */
-    letter-spacing: 2px;
+	/* determina lo spazio tra ogni singola lettera di un testo */
+	letter-spacing: 2px;
 
-    /* suddivide il contenuto in colonne */
-    column-count: 3;
+	/* suddivide il contenuto in colonne */
+	column-count: 3;
 
-    /* imposta la quantità di spazio tra le colonne */
-    column-gap: 60px;
+	/* imposta la quantità di spazio tra le colonne */
+	column-gap: 60px;
 }
 
 ul {
-    /* impostare un bordo attorno all'elemento */
-    /* border-width: 4px;
-    border-style: solid;
-    border-color: crimson; */
+	/* impostare un bordo attorno all'elemento */
+	/* border-width: 4px;
+	border-style: solid;
+	border-color: crimson; */
 
-    /* tutte queste proprietà possono essere abbreviate in un'unica proprietà (shorthand) */
-    /* border: 4px solid crimson; */
+	/* tutte queste proprietà possono essere abbreviate in un'unica proprietà (shorthand) */
+	/* border: 4px solid crimson; */
 
-    /* posso assegnare un bordo solo a un lato dell'elemento */
-    border-bottom: 4px solid crimson;
-    border-left: 6px dashed crimson;
-    border-right: 8px dotted crimson;
+	/* posso assegnare un bordo solo a un lato dell'elemento */
+	border-bottom: 4px solid crimson;
+	border-left: 6px dashed crimson;
+	border-right: 8px dotted crimson;
 }
 
 li {
-    /* per gestire l'aspetto dei puntini di ogni elemento della lista  */
-    list-style-type: none;
+	/* per gestire l'aspetto dei puntini di ogni elemento della lista  */
+	list-style-type: none;
 
-    /* possiamo dare un'ombra al testo indicando 3 parametri: distanza orizzontale dell'ombra dal testo, distanza verticale dal testo e il colore dell'ombra */
-    /* text-shadow: 2px 2px lightgray; */
-    text-shadow: 2px 2px #e9e9e9;
+	/* possiamo dare un'ombra al testo indicando 3 parametri: distanza orizzontale dell'ombra dal testo, distanza verticale dal testo e il colore dell'ombra */
+	/* text-shadow: 2px 2px lightgray; */
+	text-shadow: 2px 2px #e9e9e9;
 }
 
 /* --------------------------- COLORI - CODICI HEX -------------------------- */
@@ -80,10 +80,10 @@ li {
 */
 
 /* span {
-    display: block;
-} */
+	display: block;
+}
 
-/* div {
+div {
 	display: inline;
 } */
 
@@ -98,19 +98,15 @@ li {
     Il padding è lo spazio interno di un elemento. Si tratta dell'area che separa il contenuto dell'elemento (come testo o immagini) dai bordi dell'elemento stesso. A differenza del margine, il padding influisce sulle dimensioni complessive dell'elemento.
 */
 div {
-    border: 2px solid crimson;
-    margin: 20px 16px;
-    /* margin-top: 20px;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    margin-left: 20px; */
-    padding: 20px;
+	border: 2px solid crimson;
+	margin: 20px;
+	padding: 20px;
 }
 
 span {
-    border: 2px solid crimson;
-    margin: 20px;
-    padding: 20px;
+	border: 2px solid crimson;
+	margin: 20px;
+	padding: 20px;
 }
 
 /* ------------------------------ INLINE-BLOCK ------------------------------ */
@@ -122,5 +118,5 @@ span {
     Non iniziano su una nuova riga, a meno che non ci sia spazio insufficiente nella riga corrente.
 */
 span {
-    display: inline-block;
+	display: inline-block;
 }
