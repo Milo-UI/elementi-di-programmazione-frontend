@@ -86,8 +86,6 @@ console.log(studentiAggiornato);
     
     - Calcolare il totale dei prezzi dei prodotti compreso d'iva e scriverlo nel paragrafo con id totale
 
-    - (Da fare per ultimo). All'avvio della pagina comparirà un popup nel quale verrà chiesto il nome dell'utente. Questo nome verrà stampato in un tag h2 riportante il seguente testo: "Scontrino di nomeUtente"
-
     MINIMO 8 prodotti
 */
 
@@ -96,13 +94,27 @@ let prezzi = [1.80, 5.66, 2.00, 0.75, 12, 0.90, 2.45, 1];
 
 //getElementById() recupero una porzione di HTML
 let lista = document.getElementById("lista"); //HTMLElement
-let totale = document.getElementById("totale"); //HTMLElement
+let subtotale = document.getElementById('subtotale');
 
-//Questa è una variabile di supporto, inizializzata a 0, verrà incrementata dal ciclo for
-let grandTotal = 0;
+// Variabile di supporto, inizializzata a zero, verrà incrementata dal ciclo for
+let granTotale = 0;
 
 for (let i = 0; i < prezzi.length; i++) {
-    console.log(prodotti[i], prezzi[i]);
+    // console.log(prodotti[i], prezzi[i]);
 
     lista.innerHTML += `<li>${prodotti[i]} ${prezzi[i].toFixed(2)}€</li>`;
+
+    granTotale += prezzi[i];
 }
+
+subtotale.innerHTML = `<strong>Subtotale:</strong> ${granTotale}€`;
+
+let IvaDaPagare = granTotale * 0.22;
+
+let iva = document.getElementById('iva');
+console.log(iva);
+
+iva.innerHTML = `<strong>Costo Iva(22%):</strong> ${IvaDaPagare.toFixed(2)}€`;
+
+let totale = document.getElementById('totale');
+totale.innerHTML = `<strong>Totale:</strong> ${(granTotale + IvaDaPagare).toFixed(2)}`;
