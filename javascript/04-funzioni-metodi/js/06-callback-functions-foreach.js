@@ -1,21 +1,22 @@
-// Abbiamo visto che possiamo passare stringhe, numeri o altro come argomento di una funzione, ma è possibile anche passare una funzione, per richiamarla o eseguirla all'interno della prima
-
-// Creo una arrow function che ha come parametro una callback function
+/*
+    Abbiamo visto che possiamo passare stringhe, numeri o altro come argomento di una funzione, ma è anche possibile passare una funzione, per richiamarla o eseguirla all'interno di essa.
+*/
+// creo una arrow function che ha come parametro una callback function
 const myFunc = (callbackFunc) => {
     // fai qualcosa
     let valore = 50;
-    // richiamo la funzione di callback
+    // richiamiamo la funzione di callback
     callbackFunc(valore);
 };
 
-// myFunc(function (valore) {
+// quando richiamo la funzione, le passo come parametro un'altra funzione
+// myFunc(function(valore) {
 //     // fai qualcosa
 //     console.log(valore);
 // });
-
+// La converto in una arrow function per leggibilità
 myFunc(valore => {
-    // fai qualcosa
-    console.log(valore);
+    console.log(valore)
 });
 
 /* --------------------------------- forEach -------------------------------- */
@@ -29,22 +30,24 @@ myFunc(valore => {
 let personaggi = ['mario', 'luigi', 'peach', 'yoshi', 'bowser'];
 
 personaggi.forEach((personaggio, indice) => {
-    console.log(personaggio, indice);
+    // console.log('qualcosa'); // stamperà in console qualcosa 5 volte
+    console.log(indice, personaggio);
 });
 
-// Posso creare una funzione di callback esterna e richiamarla nel forEach
+// Posso anche creare una funzione di callback esterna e richiamarla nel forEach
 const logPersonaggio = (personaggio, indice) => {
     console.log(`${indice} - Ciao ${personaggio}!`);
 };
 
 personaggi.forEach(logPersonaggio);
-// In questo caso non mettiamo le parentesi tonde quando scriviamo il nome della funzione di callback, perché stiamo solo fornendo il riferimento alla funzione e non la stiamo chiamando. Sarà poi il metodo forEach a chiamare la funzione per ogni elemento dell'array
+// in questo caso non mettiamo le parentesi tonde quando scriviamo il nome della funzione di callback, perché stiamo solo fornendo il riferimento alla funzione e non la stiamo chiamando. Sarà poi il metodo forEach a chiamare la funzione per ogni elemento dell'array
 
 /* ----------------------------- esempio pratico ---------------------------- */
 let listaPersonaggi = document.getElementById('personaggi');
 let html = ``;
 
 personaggi.forEach(personaggio => {
+    // creiamo un html template
     html += `<li>${personaggio}</li>`;
 });
 
