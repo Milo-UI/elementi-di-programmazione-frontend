@@ -1,0 +1,19 @@
+Quale dei seguenti è un tipo di dato primitivo in JavaScript?
+
+A) Array B) String
+
+Qual è il metodo corretto per aggiungere un elemento alla fine di un array?
+
+A) array.push() B) array.add()
+
+Quale parola chiave viene utilizzata per dichiarare una variabile che non può essere riassegnata?
+
+A) let B) const
+
+Quale dei seguenti metodi è utilizzato per convertire una stringa in un numero?
+
+A) parseInt() B) stringToNumber()
+
+Quale operatore viene utilizzato per confrontare sia il valore che il tipo di dato?
+
+A) == B) ===

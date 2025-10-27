@@ -1,0 +1,107 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	color: #545454;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 4rem 1rem;
+}
+
+h1 {
+	margin-bottom: 2rem;
+}
+
+h2 {
+	margin-bottom: 1.2rem;
+}
+
+p {
+	margin-bottom: 1rem;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	margin-bottom: 2rem;
+	border-radius: 1rem;
+}
+
+ul {
+	padding-left: 1rem;
+	margin-bottom: 1rem;
+}
+
+ul li {
+	margin-bottom: 0.5rem;
+}
+
+input {
+	font-size: 1.2rem;
+	padding: 0.5rem 0.75rem;
+	border: 1px solid #eee;
+	border-radius: 4px;
+	display: block;
+	margin-bottom: 0.5rem;
+}
+
+button,
+.btn {
+	color: #fff;
+	background: #31c099;
+	border: 1px solid #31c099;
+	font-size: 1.2rem;
+	padding: 0.5rem 2rem;
+	border-radius: 4px;
+	transition: all 0.2s;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #1e7b62;
+	border-color: #1e7b62;
+}
+
+.error {
+	color: salmon;
+	padding: 10px;
+	border: 2px dashed salmon;
+}
+
+.success {
+	color: #31c099;
+	padding: 10px;
+	border: 2px dashed #31c099;
+}
+
+.feedback {
+	display: block;
+}
+
+.feedback.ok {
+	color: #31c099;
+	margin-bottom: 8px;
+}
+
+.feedback.notOk {
+	color: salmon;
+	margin-bottom: 8px;
+}
+
+input.ok {
+	border-color: #31c099;
+	background-color: #c0f9e7;
+}
+
+input.notOk {
+	border-color: salmon;
+	background-color: #f9c6c0;
+}
